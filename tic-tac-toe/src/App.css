@@ -60,36 +60,6 @@ h1 {
   animation: pulse-text-size 2s infinite ease-out;
 }
 
-#game-board {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 3rem 0;
-  padding: 0;
-  flex-direction: column;
-}
-
-#game-board ol {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-#game-board button {
-  width: 8rem;
-  height: 8rem;
-  border: none;
-  background: #aca788;
-  color: #3f3b00;
-  font-size: 5rem;
-  cursor: pointer;
-  font-family: 'Caprasimo', cursive;
-  padding: 1rem;
-}
 
 #game-over {
   position: absolute;
@@ -221,20 +191,6 @@ h1 {
   }
 }
 
-@keyframes pulse {
-  0% {
-    border-color: #f6e35a;
-    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0.4);
-  }
-  50% {
-    border-color: #f8c031;
-    box-shadow: 0 0 0 0.5rem rgba(248, 165, 49, 0);
-  }
-  100% {
-    border-color: #f6e35a;
-    box-shadow: 0 0 0 0 rgba(246, 227, 90, 0);
-  }
-}
 
 /* Fancy animation for showing the "Game Over" element */
 @keyframes pop-in {

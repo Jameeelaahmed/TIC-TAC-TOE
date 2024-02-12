@@ -2,7 +2,7 @@ import InputSpan from "../input-span";
 import "./Players.css";
 import { useState } from "react";
 
-export default function Players({ initialName, symbol }) {
+export default function Players({ initialName, symbol ,isActive}) {
     const [isEditing, setIsEditing] = useState(false);
     const [playerName, setPlayerName]= useState(initialName);
     function handleClickEdit() {
@@ -30,9 +30,10 @@ export default function Players({ initialName, symbol }) {
         data = "Save";
         wrapperType = "input";
     }
+
+
     return (
-    <>
-    <li>
+    <li className={isActive? 'active':undefined}>
         <span className="player">
             <InputSpan 
             classs="player-name" 
@@ -46,6 +47,5 @@ export default function Players({ initialName, symbol }) {
         </span>
         <button onClick={handleClickEdit}>{data}</button>
     </li>
-    </>
     );
 }
