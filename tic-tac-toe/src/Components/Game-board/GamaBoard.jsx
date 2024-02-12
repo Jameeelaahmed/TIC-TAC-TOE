@@ -18,8 +18,6 @@ export default function GameBoard({onSelectSquare,activePlayerSymbol}) {
         onSelectSquare();
     }
 
-
-
     return (
     <ol id="game-board">
         {gameBoard.map((row, rowIndex) => (
