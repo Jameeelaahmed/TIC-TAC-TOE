@@ -2,11 +2,14 @@ import InputSpan from "../input-span";
 import "./Players.css";
 import { useState } from "react";
 
-export default function Players({ initialName, symbol ,isActive}) {
+export default function Players({ initialName, symbol ,isActive,onChange}) {
     const [isEditing, setIsEditing] = useState(false);
     const [playerName, setPlayerName]= useState(initialName);
     function handleClickEdit() {
         setIsEditing((editing)=> !editing);
+        if(isEditing){
+            onChange(symbol,playerName)
+        }
     }
 
     function handleChange(event){
